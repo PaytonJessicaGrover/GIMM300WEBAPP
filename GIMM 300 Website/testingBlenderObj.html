@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+<body style=’margin : 0px; overflow: hidden;’>
+
+
+
+      <a-scene embedded arjs=’sourceType: webcam;’>
+          <a-marker preset=’hiro’>
+
+            <a-text value="ABC" ></a-text>
+
+            <a-entity scale ="2 2 2"
+
+              obj-model="obj: {{asset('/objects/artillerycannon.obj')}};
+              mtl: {{asset('/objects/artillerycannon.mtl')}}">
+
+            <!--
+            collada-model=”url(../objects/artillerycannon.dae)”>
+            obj-model=”obj: url(/objects/artillerycannon.obj);
+            mtl: url(/objects/artillerycannon.mtl)”> -->
+            </a-entity>
+          </a-marker>
+      <a-entity camera>
+      </a-entity>
+      </a-scene>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
